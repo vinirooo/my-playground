@@ -1,0 +1,38 @@
+{
+  // 에디터 관련 설정
+  "editor.fontSize": 16, // 에디터의 기본 글꼴 크기를 16으로 설정합니다.
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // 에디터의 기본 코드 포맷터로 Black을 지정합니다.
+  "editor.formatOnSave": true, // 저장 시 코드를 자동으로 포맷합니다.
+  "editor.inlineSuggest.enabled": true, // 인라인 자동 완성을 활성화합니다.
+  "editor.parameterHints.enabled": true, // 함수 호출 시 파라미터 정보를 보여주는 힌트를 활성화합니다.
+
+  // 터미널 설정
+  "terminal.integrated.fontSize": 16, // 터미널 글꼴 크기를 16으로 설정합니다.
+
+  // 마크다운 설정
+  "markdown.preview.fontSize": 18, // 마크다운 미리보기에서 사용할 글꼴 크기를 20으로 설정합니다.
+  "markdown.styles": [
+    // 마크다운 스타일시트 URL을 설정합니다.
+    "https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+  ],
+  // 탐색기 설정
+
+  "explorer.confirmDelete": false, // 파일을 삭제할 때 확인 메시지를 표시하지 않습니다.
+  "explorer.compactFolders": false, // 탐색기에서 폴더를 컴팩트하게 표시하지 않습니다.
+  "explorer.confirmDragAndDrop": false, // 드래그 앤 드롭을 할 때 확인 메시지를 표시하지 않습니다.
+  "explorer.confirmPasteNative": false, // 네이티브 파일을 붙여넣을 때 확인 메시지를 표시하지 않습니다.
+
+  // 노트북 설정
+  "notebook.output.wordWrap": true, // 노트북 출력에서 자동 줄바꿈을 활성화합니다.
+  "notebook.formatOnSave.enabled": true, // 노트북 저장 시 자동으로 포맷합니다.
+  "notebook.output.scrolling": true, // 노트북 출력을 스크롤 가능하게 설정합니다.
+  "notebook.lineNumbers": "on", // 노트북에서 줄 번호를 표시합니다.
+
+  // 언어별 설정 (Python)
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.parameterHints.enabled": true
+  }
+}
