@@ -1,3 +1,6 @@
 .env
 sqlite.db
 .cache/
+docs_cache/
+.files/
+.DS_Store
