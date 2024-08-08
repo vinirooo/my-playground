@@ -11,6 +11,7 @@ import pandas as pd
 import OpenDartReader
 import markdownify
 import mdformat
+import OpenDartReader
 
 from langchain_core.documents import Document
 from langchain_community.document_loaders.base import BaseLoader
@@ -172,3 +173,14 @@ class DartDocumentLoader(BaseLoader):
             document = self._generate_document(row)
             time.sleep(0.1)
             yield document
+
+
+def get_recent_report_no(stock_code):
+    api_key = os.environ["OPENDART_API_KEY"]
+    dart = OpenDartReader(api_key=api_key)
+    df_reports = dart.list(stock_code, kind="A")
+    df_reports = df_reports[df_reports["report_nm"].str.contains("사업보고서")]
+
+    rcept_no = df_reports.iloc[0]["rcept_no"]
+
+    return rcept_no
